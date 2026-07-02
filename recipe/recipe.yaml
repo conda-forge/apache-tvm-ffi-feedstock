@@ -13,12 +13,15 @@ source:
   sha256: 2aa5c8ece3144dad11afd6d0f10191d03cdb368bbcd9c92f9fb919f35906223d
 
 build:
-  number: 0
-  skip:
-    - win
+  number: 1
   script:
-    - export SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }}
-    - python -m pip install . -vv
+    - if: win
+      then:
+        - set "SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }}"
+        - python -m pip install . -vv
+      else:
+        - export SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }}
+        - python -m pip install . -vv
 
 requirements:
   build:
