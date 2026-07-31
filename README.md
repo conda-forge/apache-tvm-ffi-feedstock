@@ -239,4 +239,5 @@ Feedstock Maintainers
 =====================
 
 * [@iamthebot](https://github.com/iamthebot/)
+* [@pb01ka](https://github.com/pb01ka/)
 
