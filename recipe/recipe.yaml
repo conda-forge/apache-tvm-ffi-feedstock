@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: apache-tvm-ffi
-  version: "0.1.13.post2"
+  version: "0.1.13.post3"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace("-", "_") }}-${{ version }}.tar.gz
-  sha256: 7da4ede2392527c122afd36ac717d9a267627901881a38f5d66d214ff68f482e
+  sha256: b8153f020418df39cd93c3a6beda9d8c9b6e49b4e1b96de26ea6889c32347a00
 
 build:
   number: 0
